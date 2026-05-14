@@ -1,0 +1,161 @@
+/* =============================================================
+   STAR CHART — style.css
+   Read each TODO, understand the property, then write the rule.
+   ============================================================= */
+
+
+/* -------------------------------------------------------------
+   TODO 1 — Universal reset
+   WHAT:  The * selector targets EVERY element on the page.
+          By default browsers add their own margins and padding
+          (e.g. body has a default 8px margin). This removes all of it.
+          box-sizing: border-box makes width/height include padding.
+   HOW:
+     * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+     }
+------------------------------------------------------------- */
+
+/* your code here */
+
+
+/* -------------------------------------------------------------
+   TODO 2 — Style the body
+   WHAT:  Set the page background, hide scrollbars, pick a font,
+          set text color, and change the cursor to a crosshair.
+   PROPERTIES:
+     background: #000                    (black)
+     overflow: hidden                    (no scrollbars — canvas fills the screen)
+     font-family: 'Georgia', serif       (Georgia is the font, serif is fallback)
+     color: #e8d9b5                      (warm star-parchment tone)
+     cursor: crosshair                   (crosshair cursor instead of arrow)
+------------------------------------------------------------- */
+
+/* your code here */
+
+
+/* -------------------------------------------------------------
+   TODO 3 — Style the canvas
+   WHAT:  canvas is inline by default, which adds a small gap below
+          it. Setting display: block removes that gap.
+   HOW:
+     #star-canvas {
+         display: block;
+     }
+------------------------------------------------------------- */
+
+/* your code here */
+
+
+/* -------------------------------------------------------------
+   TODO 4 — Position the info panel
+   WHAT:  Fix it to the top-left corner so it stays put even if
+          the page could scroll. pointer-events: none lets clicks
+          pass through to the canvas underneath.
+   PROPERTIES:
+     position: fixed     (relative to the viewport, not the page)
+     top: 24px
+     left: 28px
+     pointer-events: none
+------------------------------------------------------------- */
+
+/* your code here */
+
+
+/* -------------------------------------------------------------
+   TODO 5 — Style the info panel heading (h1)
+   SELECTOR: #info-panel h1
+   PROPERTIES:
+     font-size: 1.1rem
+     letter-spacing: 0.2em     (spread letters apart — em = relative to font size)
+     color: #e8d9b5
+     opacity: 0.8               (slightly transparent)
+     margin-bottom: 4px
+------------------------------------------------------------- */
+
+/* your code here */
+
+
+/* -------------------------------------------------------------
+   TODO 6 — Style the info panel paragraphs (p)
+   SELECTOR: #info-panel p
+   PROPERTIES:
+     font-size: 0.72rem
+     color: #8899aa
+     letter-spacing: 0.1em
+------------------------------------------------------------- */
+
+/* your code here */
+
+
+/* -------------------------------------------------------------
+   TODO 7 — Style the .hint paragraph
+   SELECTOR: #info-panel .hint
+   PROPERTIES:
+     margin-top: 6px
+     color: #556677
+     font-style: italic
+------------------------------------------------------------- */
+
+/* your code here */
+
+
+/* -------------------------------------------------------------
+   TODO 8 — Style the tooltip box
+   WHAT:  A small floating card. position: fixed so JS can place
+          it anywhere on screen with style.left and style.top.
+   PROPERTIES:
+     position: fixed
+     background: rgba(5, 10, 20, 0.85)       (dark, semi-transparent)
+     border: 1px solid rgba(180, 210, 255, 0.2)
+     border-radius: 4px
+     padding: 8px 12px
+     pointer-events: none
+     transition: opacity 0.15s               (smooth fade in/out)
+------------------------------------------------------------- */
+
+/* your code here */
+
+
+/* -------------------------------------------------------------
+   TODO 9 — Hidden state for the tooltip
+   WHAT:  When JS adds class="hidden", this rule makes it invisible.
+          opacity: 0 is invisible but still takes up space (unlike display:none).
+          transition on the parent means the fade animates smoothly.
+   HOW:
+     #tooltip.hidden {
+         opacity: 0;
+     }
+   NOTE:  #tooltip.hidden means: the element with id="tooltip"
+          that ALSO has class="hidden". No space between them.
+------------------------------------------------------------- */
+
+/* your code here */
+
+
+/* -------------------------------------------------------------
+   TODO 10 — Style the star name inside the tooltip
+   SELECTOR: #tooltip-name
+   PROPERTIES:
+     display: block          (forces it onto its own line)
+     font-size: 0.85rem
+     color: #c8ddf0
+     letter-spacing: 0.08em
+------------------------------------------------------------- */
+
+/* your code here */
+
+
+/* -------------------------------------------------------------
+   TODO 11 — Style the magnitude text inside the tooltip
+   SELECTOR: #tooltip-mag
+   PROPERTIES:
+     display: block
+     font-size: 0.7rem
+     color: #556677
+     margin-top: 2px
+------------------------------------------------------------- */
+
+/* your code here */

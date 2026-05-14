@@ -1,0 +1,76 @@
+/* ── Reset ─────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    overflow: hidden;
+    font-family: 'Georgia', serif;
+    color: #e8d9b5;
+    cursor: crosshair;
+}
+
+/* ── Canvas ─────────────────────────────────────────────── */
+#star-canvas {
+    display: block;
+}
+
+/* ── Info panel ─────────────────────────────────────────── */
+#info-panel {
+    position: fixed;
+    top: 24px;
+    left: 28px;
+    pointer-events: none;
+}
+
+#info-panel h1 {
+    font-size: 1.1rem;
+    letter-spacing: 0.2em;
+    color: #e8d9b5;
+    opacity: 0.8;
+    margin-bottom: 4px;
+}
+
+#info-panel p {
+    font-size: 0.72rem;
+    color: #8899aa;
+    letter-spacing: 0.1em;
+}
+
+#info-panel .hint {
+    margin-top: 6px;
+    color: #556677;
+    font-style: italic;
+}
+
+/* ── Tooltip ────────────────────────────────────────────── */
+#tooltip {
+    position: fixed;
+    background: rgba(5, 10, 20, 0.85);
+    border: 1px solid rgba(180, 210, 255, 0.2);
+    border-radius: 4px;
+    padding: 8px 12px;
+    pointer-events: none;
+    transition: opacity 0.15s;
+}
+
+#tooltip.hidden {
+    opacity: 0;
+}
+
+#tooltip-name {
+    display: block;
+    font-size: 0.85rem;
+    color: #c8ddf0;
+    letter-spacing: 0.08em;
+}
+
+#tooltip-mag {
+    display: block;
+    font-size: 0.7rem;
+    color: #556677;
+    margin-top: 2px;
+}
