@@ -1,80 +1,30 @@
 <!DOCTYPE html>
-<!--
-    Every HTML file starts with this. It tells the browser:
-    "This is a modern HTML5 document." Always include it.
--->
-
-<!-- TODO 1 — Open the html tag
-     WHAT: The root element that wraps everything.
-     HOW:  <html lang="en"> ... </html>
-     WHY:  lang="en" tells the browser the page language (accessibility).
--->
-<!-- your code here -->
-
-
-    <!-- TODO 2 — Write the <head> section
-         The <head> holds invisible setup info — the page title,
-         links to CSS, character encoding, etc.
-         It should contain:
-           - <meta charset="UTF-8" />
-           - <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-           - <title>Star Chart</title>
-           - a <link> tag to load style.css
-         HOW for link: <link rel="stylesheet" href="style.css" />
-    -->
-    <!-- your code here -->
-
-
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Star Chart</title>
+     <link rel="stylesheet" href="style.css"/>
+</head>
     <body>
 
-        <!-- TODO 3 — Add the canvas element
-             WHAT: This is the drawing surface. JS will draw the
-                   night sky on it. Give it id="star-canvas".
-             HOW:  <canvas id="star-canvas"></canvas>
-             NOTE: No width/height here — JS sets those.
-        -->
         <!-- your code here -->
+     <!-- Night sky : Drawing surface -->
+     <canvas id="star-canvas"></canvas>
 
+     <!-- Floating circle : Star name and magnitude -->
+     <div id="tooltip" class="hidden">
+          <span id="tooltip-name"></span>
+          <span id="tooltip-mag"></span>
+     </div>
 
-        <!-- TODO 4 — Build the tooltip
-             WHAT: A floating box that shows a star's name and
-                   magnitude when you hover over it. Hidden by default.
-             HOW:
-               <div id="tooltip" class="hidden">
-                   <span id="tooltip-name"></span>
-                   <span id="tooltip-mag"></span>
-               </div>
-             WHY span vs div: span is inline (no line break).
-                              div is block (starts a new line).
-        -->
-        <!-- your code here -->
+     <!-- Info panel -->
+     <div id="info-panel">
+          <h1>✦ Star Chart</h1>
+          <p id="star-count"></p>
+          <p class="hint"></p>
+     </div>
 
-
-        <!-- TODO 5 — Build the info panel
-             WHAT: The top-left overlay showing the title and star count.
-             HOW:
-               <div id="info-panel">
-                   <h1>✦ Star Chart</h1>
-                   <p id="star-count"></p>
-                   <p class="hint">Hover a star to inspect it</p>
-               </div>
-             NOTE: id="star-count" is empty here — JS fills it in.
-        -->
-        <!-- your code here -->
-
-
-        <!-- TODO 6 — Load your JavaScript file
-             WHAT: Links script.js so the browser runs it.
-             HOW:  <script src="script.js"></script>
-             WHY at the bottom of body: The HTML elements above
-             must exist in the page before JS tries to find them
-             with getElementById. If the script loads first,
-             those elements don't exist yet and you get null errors.
-        -->
-        <!-- your code here -->
-
-
+     <script src="script.js"></script>
     </body>
-
-<!-- Close the html tag -->
-<!-- your code here -->
+</html>
