@@ -59,12 +59,12 @@ function drawStars() {
     stars.forEach(star => {
         const px = star.x * canvas.width;
         const py = star.y * canvas.height;
-        const time = Date.now();
+
         const twinkle = Math.sin(time * 3 + star.id) * 0.4;
         const radius = Math.max(1, (4 - star.magnitude) + twinkle);
 
-        ctx.shadowBlue = radius * 6;
-        ctx.shadowColot = '#aaccff';
+        ctx.shadowBlur = radius * 6;
+        ctx.shadowColor = '#aaccff';
         ctx.fillStyle = '#ffffff';
 
         ctx.beginPath();
@@ -81,7 +81,7 @@ function drawLabels() {
 
     constellations.forEach(constellation => {
         const firstStarId = constellation.lines[0][0];
-        const star = star.find(s => s.id === firstStarId);
+        const star = stars.find(s => s.id === firstStarId);
         const px = star.x * canvas.width;
         const py = star.y * canvas.height;
         ctx.fillText(constellation.name, px + 10, py - 10);
